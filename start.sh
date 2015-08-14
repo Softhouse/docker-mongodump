@@ -4,7 +4,7 @@ set -e
 
 env > /tmp/mongodump_env
 
-CRON_SCHEDULE=${CRON_SCHEDULE:-0 1 * * *}
+CRON_SCHEDULE=${CRON_SCHEDULE:-* * * * *}
 
 if [[ "$1" == 'no-cron' ]]; then
     exec /backup.sh
