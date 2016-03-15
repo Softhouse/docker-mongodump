@@ -2,7 +2,7 @@
 
 set -e
 
-env > /tmp/mongodump_env
+env | grep -E "PATH|MONGO" > /tmp/mongodump_env
 
 CRON_SCHEDULE=${CRON_SCHEDULE:-* * * * *}
 
